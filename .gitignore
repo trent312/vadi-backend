@@ -1,0 +1,70 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+*.env
+
+# NuGet
+*.nupkg
+.nuget/
+
+# Dotnet artifacts
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Build Results
+x64/
+x86/
+*.dll
+*.exe
+*.app
+*.pdb
+*.cache
+*.ilk
+*.log
+*.sbr
+*.tlh
+*.tli
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Tye
+.tye/
+
+# Local DBs
+*.mdf
+*.ldf
+
+# Others
+ncrunch*
+*.ndoc.xml
+*.nunit.xml
+TestResult.xml
+*.vspscc
+*.vssscc
