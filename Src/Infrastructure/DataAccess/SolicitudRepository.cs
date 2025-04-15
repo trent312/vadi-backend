@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using Application.Common.DataAccess;
 using Dapper;
 using Domain.Entidades;
@@ -11,7 +12,12 @@ public class SolicitudRepository : ISolicitudRepository
 
     public void DeleteSolicitud(int idSolicitud)
     {
-        throw new NotImplementedException();
+        string query = "exec usp_solicitud_delete @Id";
+
+        var parameters = new DynamicParameters();
+        parameters.Add("@Id", idSolicitud);
+        SqlConnection connection = new SqlConnection(CONNECTION_STRING);
+        connection.Query(query, parameters);
     }
 
     public IEnumerable<Solicitud> GetSolicitudes()
