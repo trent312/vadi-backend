@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Core\Application\Application.csproj" />
     <ProjectReference Include="..\Infrastructure\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\core\usecases\usecases.csproj" />
   </ItemGroup>
 
 </Project>
