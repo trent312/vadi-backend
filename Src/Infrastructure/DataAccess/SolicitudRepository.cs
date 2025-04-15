@@ -1,4 +1,3 @@
-using System.Reflection.Metadata;
 using Application.Common.DataAccess;
 using Dapper;
 using Domain.Entidades;
