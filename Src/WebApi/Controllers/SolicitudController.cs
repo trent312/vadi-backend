@@ -31,7 +31,7 @@ public class SolicitudController : ControllerBase
         {
             InsertSolicitudUseCase useCase = new InsertSolicitudUseCase(new SolicitudRepository());
             useCase.Execute(solicitud);
-            return Ok();
+            return Ok("Se ejecutó la acción correctamente.");
         }
         catch(Exception ex)
         {
@@ -47,7 +47,23 @@ public class SolicitudController : ControllerBase
         {
             UpdateSolicitudUseCase useCase = new UpdateSolicitudUseCase(new SolicitudRepository());
             useCase.Execute(solicitud);
-            return Ok();
+            return Ok("Se ejecutó la acción correctamente.");
+        }
+        catch(Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [Route("Delete")]
+    [HttpPost]
+    public IActionResult Delete([FromQuery]int Id)
+    {
+        try
+        {
+            DeleteSolicitudUseCase useCase = new DeleteSolicitudUseCase(new SolicitudRepository());
+            useCase.Execute(Id);
+            return Ok("Se ejecutó la acción correctamente.");
         }
         catch(Exception ex)
         {
