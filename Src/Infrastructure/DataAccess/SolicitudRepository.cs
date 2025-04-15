@@ -33,6 +33,9 @@ public class SolicitudRepository : ISolicitudRepository
 
     public void UpdateSolicitud(Solicitud solicitud)
     {
-        throw new NotImplementedException();
+        string query = "exec usp_solicitud_update @Id, @FechaSolicitud, @Solicitante, @IdEstado";
+
+        SqlConnection connection = new SqlConnection(CONNECTION_STRING);
+        connection.Query(query, solicitud);
     }
 }

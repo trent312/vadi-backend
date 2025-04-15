@@ -24,13 +24,29 @@ public class SolicitudController : ControllerBase
     }
 
     [Route("Insert")]
-    [HttpPost(Name = "Insert")]
+    [HttpPost]
     public IActionResult Insert([FromBody]Solicitud solicitud)
     {
         try
         {
             InsertSolicitudUseCase useCase = new InsertSolicitudUseCase(new SolicitudRepository());
-            useCase.execute(solicitud);
+            useCase.Execute(solicitud);
+            return Ok();
+        }
+        catch(Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
+
+    [Route("Update")]
+    [HttpPost]
+    public IActionResult Update([FromBody]Solicitud solicitud)
+    {
+        try
+        {
+            UpdateSolicitudUseCase useCase = new UpdateSolicitudUseCase(new SolicitudRepository());
+            useCase.Execute(solicitud);
             return Ok();
         }
         catch(Exception ex)

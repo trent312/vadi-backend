@@ -10,7 +10,7 @@ public class InsertSolicitudUseCase
         this.repository = repository;
     }
 
-    public void execute(Solicitud solicitud)
+    public void Execute(Solicitud solicitud)
     {
         this.repository.InsertSolicitud(solicitud);
     }
