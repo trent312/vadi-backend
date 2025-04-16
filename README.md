@@ -3,7 +3,6 @@
 
 Con este proyecto, se agilizará la gestión de solicitudes.
 
-
 ## Setup del proyecto
 
 Clonamos el proyecto
@@ -16,6 +15,12 @@ Vamos a la carpeta del proyecto
 
 ```bash
   cd vadi-backend
+```
+
+Ejecutamos el script en la base de datos
+
+```bash
+  cd sql
 ```
 
 Instalamos Dapper
@@ -35,4 +40,3 @@ Iniciamos el servidor
 ```bash
   dotnet run
 ```
-
